@@ -1,0 +1,187 @@
+
+svg{
+  top:-5vh;
+  z-index:4 !important;
+  position:absolute;
+  height:110vh;
+  width:51em;
+  -webkit-filter: drop-shadow( -14px -14px 14px #000 );
+  filter: drop-shadow( 13px 0px 7px rgba(0,0,0,.6)); 
+  pointer-events:none;
+
+}
+
+@media not all and (min-resolution:.001dpcm) { @media {
+
+    svg { 
+
+        filter:none !important;
+
+
+    }
+}}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
+{ @media {
+    svg { 
+
+        filter:none !important;
+
+    }
+}}
+#menu{
+	top:10%;
+	left:0px;
+	position:absolute;
+	width:18em;
+	height:100%;
+    z-index:5 !important;
+	overflow:initial;
+	text-align: center;
+}
+
+li a.under{
+  color: #81b3d2;
+}
+
+
+
+  #backer{
+    height: 10%;
+  }
+
+  #columnBody{
+  	margin-bottom: 1em;
+  }
+
+      a.mItem, a.mItem:visited, a.mItem:hover, a.mItem:active{
+        -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+        position:relative;
+        transition:0.5s color ease;
+        text-decoration:none;
+        color:#81b3d2;
+        font-size:2.5em;
+                font-family:arial;
+                -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+
+      }
+
+      a.mItem:hover{
+        color:#d73444;
+        cursor:pointer;
+      }
+
+      .square a.selected{
+        color:white;
+      }
+
+      a.mItem:before,a.mItem:after{
+        content: "";
+        transition:0.5s all ease;
+        -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+        position:absolute;
+      }
+a.mItem:before{
+  top:-0.25em;
+}
+a.mItem:after{
+  bottom:-0.25em;
+}
+a.mItem:before,a.mItem:after{
+  height:5px;
+  height:0.35rem;
+  width:0;
+  background:#d73444;
+}
+
+.manualSpacer{
+  height:1em;
+  width:1em;
+}
+
+.subItems{
+  margin-top: 1em;
+  color:white;
+}
+
+  .subItems ul{
+    list-style-type: circle !important;
+  }
+
+.square{
+  box-sizing:border-box;
+  margin-left:-0.4em;
+  position:relative;
+  font-size:2.5em;
+  overflow:hidden;
+}
+.square a.mItem{
+  position:static;
+  font-size:100%;
+  padding:0.2em 0.4em;
+}
+.square:before,.square:after, .square.slected:before, .square.selected:after{
+  content: "";
+  box-sizing:border-box;
+  transition:0.25s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+  width:5px;
+  width:0.35rem;
+  height:0;
+  background:#d73444;
+}
+
+.square.selected:before, .square.selected:after{
+  content: "";
+  position:absolute;
+  width:5px;
+  color:red;
+  background:#d73444;
+}
+
+
+.square:before, .square.selected:before{
+  left:0;
+  bottom:-0.2em;
+}
+
+.square:after, .square.selected:after{
+  right:0;
+  top:-0.2em;
+}
+.square a.mItem:before{
+  left:0;
+  transition:0.25s all ease;
+}
+.square a.mItem:after{
+  right:0;
+  transition:0.25s all ease;
+}
+
+.square:hover:before,.square:hover:after, .square.selected:before, .square.selected:after{
+  height:calc(100% + 0.4em);
+}
+.square:hover a.mItem:before,.square:hover a.mItem:after, .square a.selected:before, .square a.selected:after{
+  width:100%;
+}
+
+#pContainer{
+  position:relative;
+  width:calc(100% - 18em);
+  height:100vh;
+  margin-left:18em;
+  z-index:-1;
+  background: -webkit-radial-gradient(#edf2f4 15%, blue 10%);  Safari 5.1 to 6.0 
+  background: -o-radial-gradient(#edf2f4 15%, blue);  For Opera 11.6 to 12.0 
+  background: -moz-radial-gradient(#edf2f4 15%, blue);  For Firefox 3.6 to 15 
+  background: radial-gradient(#edf2f4 15%, #c9dde5);
+  background:radial-gradient(#edf2f4 40%, #c9dde5);
+}
